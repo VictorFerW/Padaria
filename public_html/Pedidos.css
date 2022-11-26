@@ -1,0 +1,866 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #777;
+    margin: 0%;
+}
+
+
+img{
+    max-width: 100%;
+}
+body{
+    background-color: #7b7bd4;
+    font-family: Secular One;
+    
+    background-color: #2C2E43;
+    background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
+
+}
+
+header a{
+    
+     font-family: 'Alfa Slab One', cursive;
+     
+     margin: 1em;   
+     transition: 1s;
+     font-size: 1em;
+    
+}
+header img{
+  padding-left: 20%;
+}
+
+header a:hover{
+    text-decoration: none;
+    color:  aqua;
+    
+}
+
+header {
+background: url('imagens/stock-photo-top-view-bakery-ingredients-cooking\ \(1\).jfif');
+
+
+width: 100%;
+height: auto;
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+overflow: hidden;
+border-radius: 0 0 85% 85% / 30%;
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+#menu__toggle {
+	opacity: 0;
+	color: #fff;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+	transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+	left: 0 !important;
+  }
+  .menu__btn {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 2;
+	
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #084594;
+	transition-duration: .25s;
+  border: 0.5px solid #f4ec0a;
+	box-shadow:  15px #f4ec0a;
+	
+  }
+  .menu__btn > span::before {
+	content: '';
+	top: -8px;
+  }
+  .menu__btn > span::after {
+	content: '';
+	top: 8px;
+  }
+  .menu__box {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: -100%;
+	width: 300px;
+	height: 100%;
+	margin: 0;
+	padding: 80px 0;
+	list-style: none;
+	background-color: #7b7bd4;
+	background-color: #2C2E43;
+	overflow: visible;
+	background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
+	z-index: 1;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+	transition: all ease-out;
+	transition-duration: .75s  ;
+  }
+  
+  
+  .menu__item {
+	display: block;
+	
+	padding: 10px 20px;
+	color: #e7e853;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration: none;
+	transition-duration: .25s;
+	border-radius: 2em;
+  }
+  .menu__item:hover {
+	background-color: #084594;
+  }
+  
+  
+  
+  .wrapper {
+	position: absolute;
+	top: 77%;
+	left:73%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+   
+  }
+  
+  
+  .wrapper ul {
+	list-style: none;
+  }
+  .wrapper i{
+	  margin-left: -9px;
+	  
+  }
+  
+  .wrapper ul li {
+	width: 50px;
+	height: 50px;
+	line-height: 10px;
+	margin: 0 10px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 5px solid #D8E2DC;
+	float: left;
+	transition: all 0.5s ease;
+  }
+  
+  
+  .wrapper ul li .fa {
+	color: #D8E2DC;
+	margin-top: 5px;
+	transition: all 0.5s ease;
+  }
+  
+  
+  /*facebook*/
+  .wrapper ul li:hover.facebook {
+	border: 2px solid #f4ec0a;
+	box-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-facebook {
+	color: #f4ec0a;
+	text-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  /*twitter*/
+  .wrapper ul li:hover.twitter {
+	border: 2px solid #f4ec0a;
+	box-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-twitter {
+	color: #f4ec0a;
+	text-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  /* instagram */
+  .wrapper ul li:hover.instagram {
+	border: 2px solid #f4ec0a;
+	box-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-instagram {
+	color: #f4ec0a;
+	text-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  /* google */
+  .wrapper ul li:hover.google {
+	border: 2px solid #f4ec0a;
+	box-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-google {
+	color: #f4ec0a;
+	text-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  /* whatsapp */
+  .wrapper ul li:hover.whatsapp {
+	border: 2px solid #f4ec0a;
+	box-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-whatsapp {
+	color: #f4ec0a;
+	text-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  
+  /* media queries */
+  
+  @media screen and (max-width: 640px){
+	.wrapper {
+		width: 350px;
+	}
+	.wrapper ul li{
+		margin-top: 10px;
+	}
+	.wrapper ul li.google{
+		margin-left: 60px;
+	}
+  }
+  
+  
+  @media screen and (max-width: 340px){
+	.wrapper {
+		width: 150px;
+	}
+	.wrapper ul li{
+		margin:15px;
+	}
+	.wrapper ul li.google{
+		margin-left: 15px;
+	}
+  }
+
+
+
+
+/*/////////////////////////////////////////////////////////////////////////////*/
+
+
+.nav ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3)
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, .3)
+}
+
+.main-header {
+    background-color: rgba(0, 0, 0, .6);
+    background-image: url("Images/Header Background.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Booter - Zero Zero";
+    font-weight: normal;
+    color: white;
+}
+
+.band-name-large {
+    font-size: 8em;
+}
+
+
+
+
+
+.section-header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color:  rgb(229, 232, 41);;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 5px;
+}
+
+.about-band-image {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+.main-footer {
+    background-color: #56CCF2;
+    color: white;
+    padding: .25em 0;
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #2D9CDB;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+    border: none;
+}
+
+.tour-item {
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.tour-date {
+    color: #555;
+    width: 11%;
+    font-weight: bold;
+}
+
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 19%;
+}
+
+.shop-item {
+    margin: 15px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(231, 234, 22);
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    max-height: 250px;
+	max-width: 300px;
+	border-radius: 3em;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: rgb(229, 232, 41);
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid rgb(47, 120, 231);
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+    color: rgb(229, 232, 41);
+    margin: 10px 10px 0px 10px;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: rgb(229, 232, 41);
+}
+
+.cart-quantity {
+    width: 35%;
+    color: rgb(229, 232, 41);
+}
+
+.cart-item-title {
+    color: rgb(229, 232, 41);
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 3px solid #d0e351;
+    background-color: rgb(187, 185, 185);
+    color: rgb(58, 19, 213);
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: rgb(229, 232, 41);
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: rgb(229, 232, 41);
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+
+
+
+/*/////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+.footer-basic {
+  padding:15px 0;
+  background: url('imagens/stock-photo-top-view-bakery-ingredients-cooking\ \(1\).jfif');
+
+
+width: 100%;
+height: auto;
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+overflow: hidden;
+color:#4b4c4d;
+  
+}
+
+.footer-basic ul {
+  padding-left: 25em;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+  display: flex;
+  flex-direction: row ;
+  text-align: center;
+}
+
+.footer-basic li {
+  padding:0 50px;
+  text-align: center;
+  justify-content: center;
+  
+}
+.list-inline{
+  text-align: center;
+
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+  
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid rgb(60, 58, 58);
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+
+
+@media (max-width:500px){
+  header{
+      
+      width: 100%;
+      height: auto;
+
+  }
+
+  header img{
+    padding-left: 10%;
+  }
+
+  #slider {
+        
+    width: 100%;
+   max-width: 700px;
+   height: 25vw;
+   max-height: 250px;
+   
+   position: relative;
+  
+   text-align: center;
+   
+   
+   
+}
+
+#slider img{
+   opacity: 0;
+
+   position: absolute;
+   
+   width: 100%;
+   height: 100%;
+   border-radius: 3em;;
+   object-fit: cover;
+   margin-left: 2em;
+   transition: opacity 800ms;
+   
+}
+
+#slider img.selected { 
+   opacity: 1;
+}
+
+
+
+#banner{
+   max-width: 60%;
+   background: url(imagens/banner.png) ;
+   background-repeat:  no-repeat;
+
+   padding-bottom: 6em;
+   display:flex ;
+   flex-direction: row;
+   
+   
+}
+
+
+#banner h2{
+
+ font-size: 0.5em;
+ color: #e7e853;
+ text-align: justify;
+ padding-top: 70px;
+ 
+ text-decoration: underline overline;
+
+ 
+ 
+}
+
+
+#banner2 img{
+  width: 100%;
+  height: 25em;
+  background-image: url("imagens/Nosos_visaomissao_e_valores.png");
+  background-repeat: no-repeat;
+  
+  
+}
+
+
+
+
+
+
+
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
+  padding-bottom: 10em;
+  
+}
+
+
+
+
+
+
+
+}
+
+
+.btn-purchase{
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #1481ef;
+  background-image: linear-gradient(45deg, #0a21f1 0%, #2ce9ec  51%, #4b2fff  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+
+}
+
+
+
+
+
+.shop-item-button {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #e5eb23;
+  background-image: linear-gradient(45deg, #ef751d 0%, #e5eb23  51%, #ef751d  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+}
+
+.btn-primary:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+

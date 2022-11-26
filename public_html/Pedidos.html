@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pedidos</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="Pedidos.css" />
+        <script type="module" src="store.js" ></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        
+        <header> 
+        
+            <div id="logo">
+                <img src="imagens/picwish.png" alt=""/>
+                </div>   
+            
+            
+            <nav>
+                
+                
+                <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        
+        
+        
+        
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        
+        <ul class="menu__box">
+           
+            <li><a class="menu__item" href="index.html">Home</a></li>
+            <li><a class="menu__item" href="sobre.html">Sobre</a></li>
+              <li><a class="menu__item" href="produtos.html">Produtos</a></li>
+            <li><a class="menu__item" href="login.html">Login</a></li>
+              <li><a class="menu__item" href="contato.html">Contato</a></li>
+            <li><a class="menu__item" href="login.html">Pedidos</a></li>
+            
+                         
+    <div class="wrapper">
+      <ul>
+        <li class="facebook"><a href="https://www.facebook.com/PadariaRealPaginaOficial/"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+        <li class="twitter"><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+        <li class="instagram"><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>    
+        <li class="whatsapp"><a href=""><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>        
+        
+        </ul>
+       
+    
+    
+      </div>
+            </nav>
+            
+            
+    </header>
+
+
+
+
+        <section class="container content-section">
+            <h2 class="section-header">Produtos</h2>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Pao de Queijo</span>
+                    <img class="shop-item-image" src="imagens/paodqueijo.jfif">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$1.50</span>
+                        <button class="btn btn-primary shop-item-button" type="button">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Pão Frances</span>
+                    <img class="shop-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9MGsrI_kzHU2qSSmB2iFC-saARa-11hoGDw&usqp=CAU">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$0.99</span>
+                        <button class="btn btn-primary shop-item-button"type="button">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Rosca de palvino</span>
+                    <img class="shop-item-image" src="https://www.alimentosvalesul.com.br/ger/f/receitas/2-21-G.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$3.50</span>
+                        <button class="btn btn-primary shop-item-button" type="button">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+
+
+
+
+
+        
+
+        <section class="container content-section">
+            <h2 class="section-header">Carta</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">Item</span>
+                <span class="cart-price cart-header cart-column">Preço</span>
+                <span class="cart-quantity cart-header cart-column">Quantidade</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button">Comprar</button>
+        </section>
+        <div class="footer-basic">
+            <footer>
+                
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="login.html">Pedidos</a></li>
+                    <li class="list-inline-item"><a href="index.html">Home</a></li>
+                    <li class="list-inline-item"><a href="sobre.html">Sobre</a></li>
+                    <li class="list-inline-item"><a href="contato.html">Contato</a></li>
+                    <li class="list-inline-item"><a href="login.html">login</a></li>
+                </ul>
+                <p class="copyright">Company Name © 2018</p>
+            </footer>
+        </div>
+    </body>
+    <script>
+
+if (document.readyState == 'loading') {
+        document.addEventListener('DOMContentLoaded', ready)
+    } else {
+        ready()
+    }
+    
+
+   
+
+
+        
+
+
+    
+    function ready() {
+        var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+        for (var i = 0; i < removeCartItemButtons.length; i++) {
+            var button = removeCartItemButtons[i]
+            button.addEventListener('click', removeCartItem)
+        }
+    
+        var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+        for (var i = 0; i < quantityInputs.length; i++) {
+            var input = quantityInputs[i]
+            input.addEventListener('change', quantityChanged)
+        }
+    
+        var addToCartButtons = document.getElementsByClassName('shop-item-button')
+        for (var i = 0; i < addToCartButtons.length; i++) {
+             
+            var button = addToCartButtons[i]
+            button.addEventListener('click', addToCartClicked)
+        }
+    
+        
+
+        document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+    }
+    
+    function purchaseClicked() {
+        alert('obrigado pela compra')
+        
+        var cartItems = document.getElementsByClassName('cart-items')[0]
+        while (cartItems.hasChildNodes()) {
+            cartItems.removeChild(cartItems.firstChild)
+        }
+        updateCartTotal()
+    }
+    
+    function removeCartItem(event) {
+        var buttonClicked = event.target
+        buttonClicked.parentElement.parentElement.remove()
+        updateCartTotal()
+    }
+    
+    function quantityChanged(event) {
+        var input = event.target
+        if (isNaN(input.value) || input.value <= 0) {
+            input.value = 1
+        }
+        updateCartTotal()
+    }
+    
+    function addToCartClicked(event) {
+        var button = event.target
+        var shopItem = button.parentElement.parentElement
+        var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+        var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+        var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+        addItemToCart(title, price, imageSrc)
+        updateCartTotal()
+    }
+    
+    function addItemToCart(title, price, imageSrc) {
+        var cartRow = document.createElement('div')
+        cartRow.classList.add('cart-row')
+        var cartItems = document.getElementsByClassName('cart-items')[0]
+        var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+        for (var i = 0; i < cartItemNames.length; i++) {
+            if (cartItemNames[i].innerText == title) {
+                alert('Este item já está no carrinho')
+                return
+            }
+        }
+        var cartRowContents = `
+            <div class="cart-item cart-column">
+                <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+                <span class="cart-item-title">${title}</span>
+            </div>
+            <span class="cart-price cart-column">${price}</span>
+            <div class="cart-quantity cart-column">
+                <input class="cart-quantity-input" type="number" value="1">
+                <button class="btn btn-danger" type="button">REMOVE</button>
+            </div>`
+        cartRow.innerHTML = cartRowContents
+        cartItems.append(cartRow)
+        cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+        cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+    }
+    
+    function updateCartTotal() {
+        var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+        var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+        var total = 0
+        for (var i = 0; i < cartRows.length; i++) {
+            var cartRow = cartRows[i]
+            var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+            var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+            var price = parseFloat(priceElement.innerText.replace('$', ''))
+            var quantity = quantityElement.value
+            total = total + (price * quantity)
+        }
+        total = Math.round(total * 100) / 100
+        document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+    }
+
+
+    </script>
+
+
+
+
+
+    
+
+
+
+</html>

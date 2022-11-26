@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="E-Commerce.js" async></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="container">
+            <div class="row">
+                <h2>Products</h2>
+            </div>
+
+            <div class="row" id="row1">
+
+            </div>
+
+            <div class="row">
+                <h2>Shopping Cart</h2>
+            </div>
+            <div class="row" id="row2">
+
+            </div>
+
+            <table class="table">
+
+                <thead class="thead-dark">
+                    <tr>
+
+                        <th scope="col">#</th>
+                        <th scope="col">Remove</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Qauntity</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tableProducts">
+
+
+                </tbody>
+
+                <tfoot id="total">
+
+
+
+                </tfoot>
+
+
+            </table>
+
+
+
+        </div>
+
+
+    </header>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.9/dist/sweetalert2.all.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+    <script type="module">
+        
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+        
+        
+        const firebaseConfig = {
+    apiKey: "AIzaSyBXlMuGv5ErWTBZxhkbc0CSSGcq3kYsRZI",
+    authDomain: "tcc-padaria-66c9c.firebaseapp.com",
+    databaseURL: "https://tcc-padaria-66c9c-default-rtdb.firebaseio.com",
+    projectId: "tcc-padaria-66c9c",
+    storageBucket: "tcc-padaria-66c9c.appspot.com",
+    messagingSenderId: "981522678195",
+    appId: "1:981522678195:web:2f0540a743d34bc3f5cbc6",
+    measurementId: "G-EC7QXS853V"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+        
+        </script>
+    
+    
+
+
+
+</body>
+
+    
+</body>
+</html>

@@ -1,0 +1,237 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <title>Login</title>
+    
+   
+    
+    <link href="login.css" rel="stylesheet" type="text/css"/>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+</head>
+ 
+
+   
+<body>
+    
+      
+            <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+    
+    <ul class="menu__box">
+       
+        <li><a class="menu__item" href="index.html">Home</a></li>
+        <li><a class="menu__item" href="sobre.html">Sobre</a></li>
+	      <li><a class="menu__item" href="produtos.html">Produtos</a></li>
+        <li><a class="menu__item" href="login.html">Login</a></li>
+	      <li><a class="menu__item" href="contato.html">Contato</a></li>
+        <li><a class="menu__item" href="login.html">Pedidos</a></li>
+  
+        
+                     
+<div class="wrapper">
+  <ul>
+    <li class="facebook"><a href="https://www.facebook.com/PadariaRealPaginaOficial/"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+    <li class="twitter"><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+    <li class="instagram"><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>    
+    <li class="whatsapp"><a href=""><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a></li>
+  </ul>
+</div>        
+    
+    </ul>
+   
+  </div>
+  <header>       
+
+<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+  
+      <label for="chk" aria-hidden="true">Cadastrar-se</label>
+			<div class="signup">
+			<form action="login.php" method="POST">
+
+				  <input id="enterEmail" type="text"  name="email" placeholder="E-mail" required>
+          <input id="enterName" type="text" name="nome" placeholder="Nome Completo" required> 
+					<input id="enterSenha" type="password" name="pswd" placeholder="Senha" required>
+          <input id="enterNum" type="number"  placeholder="Numero de Telefone" required>        
+          <input id="enterCidade" type="text" name="cidade" placeholder="Cidade" required>
+          <input id="enterEndereço" type="text" name="datetime-local" placeholder="Endereço" required>
+
+          </form>	
+
+          
+          
+					<button id="submit">Cadastrar-se</button>
+				
+			</div>
+
+			<div class="login">
+        
+				<form>
+					<label for="chk" aria-hidden="true" >Entrar</label>
+          
+					<input id="enterEmail1" type="email" name="email" placeholder="E-mail" required="">
+					<input id="enterSenha1" name="pswd" type="password" placeholder="Senha" required="">
+					
+				</form>
+        <button id="BtnEnter">Entrar</button>
+			</div>
+	</div>
+  
+  
+   
+   
+
+
+    
+</body>
+
+
+ <script type="module" >
+ 
+ 
+ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+ // TODO: Add SDKs for Firebase products that you want to use
+ // https://firebase.google.com/docs/web/setup#available-libraries
+
+ // Your web app's Firebase configuration
+ const firebaseConfig = {
+   apiKey: "AIzaSyCB_NghHdkSDGuH6HrD-MRyXRTRU2FyJ6w",
+   authDomain: "tcc-padaria1.firebaseapp.com",
+   databaseURL: "https://tcc-padaria1-default-rtdb.firebaseio.com",
+   projectId: "tcc-padaria1",
+   storageBucket: "tcc-padaria1.appspot.com",
+   messagingSenderId: "917902650784",
+   appId: "1:917902650784:web:3ef3ff9ffcb2fb8a35c8c5"
+ };
+
+ // Initialize Firebase
+ const app = initializeApp(firebaseConfig);
+ const analytics = getAnalytics(app);
+     const auth = getAuth();
+   const database = getDatabase();
+     console.log(app);
+
+   
+     import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+    
+
+     
+
+     //----- novos registros de variaveis  
+     document.getElementById("submit").addEventListener("click", function() {
+     var email =  document.getElementById("enterEmail").value;
+     var password = document.getElementById("enterSenha").value;
+     var enterNum = document.querySelector("#enterNum").value;
+     var enterName = document.querySelector("#enterName").value;
+     var enterCidade = document.querySelector("#enterCidade").value;
+     var enterEndereco = document.querySelector("#enterEndereço").value;
+
+
+
+
+
+
+const db = getDatabase();
+
+set(ref(db, 'users/' + enterName + '/produto/' + 'pao_de_queijo/'), { 
+ quantidade:0,
+
+ })
+ set(ref(db, 'users/' + enterName + '/produto/' + 'Rosca/'), { 
+ quantidade:0,
+
+ })
+ set(ref(db, 'users/' + enterName + '/produto/' + 'Pao_Frances/'), { 
+ quantidade:0,
+
+ })
+ set(ref(db, 'users/' + enterName +  '/Info/'), { 
+
+
+   username: enterName,
+   senha: password,
+   email: email,
+   numeroTelefone:enterNum,
+   cidade : enterCidade,
+   endereco: enterEndereco,
+
+ })
+ 
+
+            
+
+
+         //Cadastra um cliente com o email e a senha dele  
+         createUserWithEmailAndPassword(auth, email, password)
+         .then((userCredential) => {
+           // Cadastra
+           const user = userCredential.user;
+           console.log(user);
+           alert("Cadastro feito com sucesso");
+           
+            
+
+
+            
+
+           })
+       
+           // se dar algum erro aparece a mensagem de erro
+         });
+         
+     
+     
+
+
+     
+    // ----- End
+
+     //----- pega os nomes de imputs/botões e transformam em variaveis	  
+     document.getElementById("BtnEnter").addEventListener("click", function() {
+         var email =  document.getElementById("enterEmail1").value;
+         var password = document.getElementById("enterSenha1").value;
+
+     //pega o email e a senha e tenta logar com eles 
+         signInWithEmailAndPassword(auth, email, password)
+         .then((userCredential) => {
+           // faz o login do usuario
+           const user = userCredential.user;
+           console.log(user);
+           alert(user.email+" Login Efetuado com sucesso!");
+       window.location.replace('Pedidos.html');
+          // 
+           // ...
+         })
+         .catch((error) => {
+           const errorCode = error.code;
+           const errorMessage = error.message;
+           console.log(errorMessage);
+           alert(errorMessage);
+         });		  		  
+     });
+ 
+ 
+ 
+ </script>
+
+
+</header>
+</html>

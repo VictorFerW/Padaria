@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+img{
+    max-width: 100%;
+}
+body{
+    background-color: #7b7bd4;
+    font-family: Secular One;
+    
+    background-color: #2C2E43;
+    background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
+
+}
+
+header a{
+    
+     font-family: 'Alfa Slab One', cursive;
+     color:#084594;
+     margin: 1em;
+     justify-content: flex-start;
+     transition: 1s;
+     font-size: 1em;
+    
+}
+
+header a:hover{
+    text-decoration: none;
+    color:  aqua;
+    
+}
+header img{
+  padding-left: 400px;
+}
+
+header {
+background: url('imagens/stock-photo-top-view-bakery-ingredients-cooking\ \(1\).jfif');
+
+
+width: 100%;
+height: auto;
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+overflow: hidden;
+border-radius: 0 0 85% 85% / 30%;
+}
+header .overlay{
+width: 100%;
+height: 100%;
+padding: 50px;
+color: #FFF;
+text-shadow: 1px 1px 1px #333;
+background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%);
+
+}
+#imagem{
+    max-width: 300px;
+    max-height: 250px;
+    border-radius: 3em;
+    margin: 15px;
+}
+#historia p{
+        
+    font-size: 20px;
+    max-width: 100%;
+    justify-content:space-between; 
+    margin: 6em 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #084594;
+    font-family: 'Luxurious Roman', cursive;
+    
+    
+    
+}
+#historia{
+    background-color: #e8cc6e;
+    margin: 20px;
+    border-radius: 3em;
+    
+    
+}
+#His{
+    font-size: 3em;
+    color: #e8cc6e;
+    font-family: 'Shrikhand', cursive;
+
+}
+
+
+#linha1 {
+    margin: 2em;
+    border-bottom: 10px solid #e8cc6e;
+}
+
+/**********************************************************************************/
+
+
+#menu__toggle {
+	opacity: 0;
+	color: #fff;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+	transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+	left: 0 !important;
+  }
+  .menu__btn {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 2;
+	
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #084594;
+	transition-duration: .25s;
+  border: 0.5px solid #f4ec0a;
+	box-shadow:  15px #f4ec0a;
+	
+  }
+  .menu__btn > span::before {
+	content: '';
+	top: -8px;
+  }
+  .menu__btn > span::after {
+	content: '';
+	top: 8px;
+  }
+  .menu__box {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: -100%;
+	width: 300px;
+	height: 100%;
+	margin: 0;
+	padding: 80px 0;
+	list-style: none;
+	background-color: #7b7bd4;
+	background-color: #2C2E43;
+	overflow: visible;
+	background-image: url("https://www.transparenttextures.com/patterns/random-grey-variations.png");
+	z-index: 1;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+	transition: all ease-out;
+	transition-duration: .75s  ;
+  }
+  
+  
+  .menu__item {
+	display: block;
+	
+	padding: 10px 20px;
+	color: #e7e853;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	text-decoration: none;
+	transition-duration: .25s;
+	border-radius: 2em;
+  }
+  .menu__item:hover {
+	background-color: #084594;
+  }
+  
+  
+  
+  .wrapper {
+	position: absolute;
+	top: 77%;
+	left:85%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+   
+  }
+  
+  
+  .wrapper ul {
+	list-style: none;
+  }
+  .wrapper i{
+	  margin-left: -9px;
+	  
+  }
+  
+  .wrapper ul li {
+	width: 40px;
+	height: 40px;
+	line-height: 10px;
+	margin: 0 10px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 5px solid #D8E2DC;
+	float: left;
+	transition: all 0.5s ease;
+  }
+  
+  
+  .wrapper ul li .fa {
+	color: #D8E2DC;
+	margin-top: 5px;
+	transition: all 0.5s ease;
+  }
+  
+  
+  /*facebook*/
+  .wrapper ul li:hover.facebook {
+	border: 2px solid #f4ec0a;
+	box-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-facebook {
+	color: #f4ec0a;
+	text-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  /*twitter*/
+  .wrapper ul li:hover.twitter {
+	border: 2px solid #f4ec0a;
+	box-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-twitter {
+	color: #f4ec0a;
+	text-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  /* instagram */
+  .wrapper ul li:hover.instagram {
+	border: 2px solid #f4ec0a;
+	box-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-instagram {
+	color: #f4ec0a;
+	text-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  /* google */
+  .wrapper ul li:hover.google {
+	border: 2px solid #f4ec0a;
+	box-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-google {
+	color: #f4ec0a;
+	text-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  /* whatsapp */
+  .wrapper ul li:hover.whatsapp {
+	border: 2px solid #f4ec0a;
+	box-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  .wrapper ul li:hover .fa-whatsapp {
+	color: #f4ec0a;
+	text-shadow: 0 0 15px #f4ec0a;
+	transition: all 0.5s ease;
+  }
+  
+  
+  /* media queries */
+  
+  @media screen and (max-width: 640px){
+	.wrapper {
+		width: 350px;
+	}
+	.wrapper ul li{
+		margin-top: 10px;
+	}
+	.wrapper ul li.google{
+		margin-left: 60px;
+	}
+  }
+  
+  
+  @media screen and (max-width: 340px){
+	.wrapper {
+		width: 150px;
+	}
+	.wrapper ul li{
+		margin:15px;
+	}
+	.wrapper ul li.google{
+		margin-left: 15px;
+	}
+  }
+
+
+
+
+  /*//////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+  .footer-basic {
+    padding:15px 0;
+    background: url('imagens/stock-photo-top-view-bakery-ingredients-cooking\ \(1\).jfif');
+  
+  
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  color:#4b4c4d;
+    
+  }
+  
+  .footer-basic ul {
+    padding-left: 25em;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+    display: flex;
+    flex-direction: row ;
+    text-align: center;
+  }
+  
+  .footer-basic li {
+    padding:0 50px;
+    text-align: center;
+    justify-content: center;
+    
+  }
+  .list-inline{
+    text-align: center;
+  
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+    
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid rgb(60, 58, 58);
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
